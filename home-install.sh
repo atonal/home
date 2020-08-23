@@ -5,17 +5,6 @@ set -u
 
 DIR="$( readlink -f "$( dirname "${BASH_SOURCE[0]}" )" )"
 
-install_packages=(
-    cscope
-    curl
-    irssi
-    rxvt-unicode-256color
-    vim
-    vim-gnome
-)
-
-sudo apt install -y "${install_packages[@]}"
-
 echo "Initializing and updating git submodules"
 git submodule update --init
 
