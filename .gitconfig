@@ -1,0 +1,47 @@
+[core]
+    autocrlf = input
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    editor = vim
+    excludesfile=~/.gitignore-global
+    pager = less -XRMSI
+
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = yellow
+    changed = green
+    header = white
+    untracked = cyan
+
+[alias]
+    a = add
+    s = status
+    ss = status -sb
+    ci = commit
+    cian = commit -a --amend --no-edit
+    fere = !git fetch && git rebase origin/master --committer-date-is-author-date
+    b = branch
+    co = checkout
+    df = diff
+    dw = diff --word-diff
+    l  = log --decorate=full
+    lsu = log --no-merges --date-order --pretty=format:'%C(cyan)%h%Creset %aD -%C(yellow) %s %Creset(%cn)'
+    ld = log -p
+    lw = log -p --word-diff
+    lg = log --graph --decorate --pretty=oneline --abbrev-commit
+    lga = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lgb = log --graph --decorate --pretty=oneline --abbrev-commit --branches
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+    sw = switch
+[push]
+	default = simple
