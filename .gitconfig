@@ -45,3 +45,6 @@
     sw = switch
 [push]
 	default = simple
+[user]
+	email = tvkoisti@gmail.com
+	name = Tuukka Koistinen
