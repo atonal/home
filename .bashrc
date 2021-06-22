@@ -164,8 +164,5 @@ if [ -f "${HOME}/lib/azure-cli/az.completion" ]; then
 fi
 
 export GOPATH=$HOME/gocode
-export GOROOT=/usr/lib/go-1.6
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/opt/ghidra/ghidra_9.1.2_PUBLIC
-export PATH=$PATH:$HOME/opt/minikube

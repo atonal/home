@@ -5,73 +5,75 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/neomru.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'godlygeek/tabular'
-Plug 'gregsexton/gitv'
-Plug 'kergoth/vim-bitbake'
-Plug 'majutsushi/tagbar'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'nelstrom/vim-visual-star-search'
-Plug 'scrooloose/syntastic'
-Plug 'sjl/gundo.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-salve'
-Plug 'guns/vim-clojure-static'
-Plug 'vim-scripts/a.vim'
-Plug 'vim-scripts/DoxygenToolkit.vim'
-Plug 'vim-scripts/ScrollColors'
-Plug 'vim-scripts/cmake'
-Plug 'junousia/vim-babeltrace'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'triglav/vim-visual-increment'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'gustafj/vim-ttcn'
-Plug 'Rykka/colorv.vim'
 Plug 'atonal/vim-limithi'
+Plug 'bazelbuild/vim-ft-bzl'
 Plug 'benjumanji/vim-togglelist'
 Plug 'brookhong/cscope.vim'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'mfukar/robotframework-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dbeniamine/cheat.sh-vim'
+Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json'
-Plug 'keith/tmux.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go'
-Plug 'plasticboy/vim-markdown'
-Plug 'lepture/vim-jinja'
-Plug 'pangloss/vim-javascript'
-Plug 'vim-erlang/vim-erlang-runtime'
-Plug 'bazelbuild/vim-ft-bzl'
+" Plug 'gavocanov/vim-js-indent'
 Plug 'glts/vim-magnum'
 Plug 'glts/vim-radical'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'lervag/vimtex'
+Plug 'godlygeek/tabular'
+Plug 'gregsexton/gitv'
+Plug 'guns/vim-clojure-static'
+Plug 'gustafj/vim-ttcn'
 " Plug 'jelera/vim-javascript-syntax'
-" Plug 'gavocanov/vim-js-indent'
+Plug 'junousia/vim-babeltrace'
+Plug 'keith/tmux.vim'
+Plug 'kergoth/vim-bitbake'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'dbeniamine/cheat.sh-vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'lepture/vim-jinja'
+Plug 'lervag/vimtex'
+Plug 'majutsushi/tagbar'
+Plug 'mfukar/robotframework-vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'raimondi/delimitmate'
+Plug 'rust-lang/rust.vim'
+Plug 'Rykka/colorv.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'sjl/gundo.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-salve'
+Plug 'tpope/vim-surround'
+Plug 'triglav/vim-visual-increment'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'raimondi/delimitmate'
-Plug 'easymotion/vim-easymotion'
+Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'vim-scripts/a.vim'
+Plug 'vim-scripts/cmake'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'vim-scripts/ScrollColors'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 "Colorschemes
-Plug 'flazz/vim-colorschemes'
-Plug 'sickill/vim-sunburst'
-Plug 'sickill/vim-monokai'
 Plug 'ciaranm/inkpot'
+Plug 'flazz/vim-colorschemes'
+Plug 'nanotech/jellybeans.vim'
+Plug 'sickill/vim-monokai'
+Plug 'sickill/vim-sunburst'
 Plug 'vim-scripts/Wombat'
 Plug 'vim-scripts/wombat256.vim'
-Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 let mapleader=","
@@ -140,7 +142,7 @@ nnoremap <silent> <F6> :TagbarToggle<CR>
 " Comment / uncomment
 map <silent> <F7> gcc
 
-map <F9> :Gblame<CR>
+map <F9> :Git blame<CR>
 
 map <silent> <F11> ==<Esc><Esc><Esc>
 
@@ -562,9 +564,6 @@ let g:tex_flavor = 'latex'
 nnoremap <Leader>c :execute ":!sed -n " . line('.') . "," . line('.') . "p %"<CR>
 vnoremap <Leader>c :<C-W>execute ":!sed -n " . line("'<") . "," . line("'>") . "p %"<CR>
 
-" vim-go
-let g:go_version_warning = 0
-
 " bash variable text object, use e.g. dav to delete ${}
 vnoremap av :<C-U>silent! normal! F{F$vf}<CR>
 omap av :normal vav<CR>
@@ -578,9 +577,6 @@ omap ac :normal vac<CR>
 "vim-go
 let g:go_version_warning = 0
 
-" tabular
-" AddTabularPattern! robot_variables /}\zs /l3l0l0
-
 " ctrlp
 let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_show_hidden = 1
@@ -589,3 +585,16 @@ let g:ctrlp_show_hidden = 1
 nmap <Leader><Leader>S <Plug>(easymotion-overwin-f)
 nmap <Leader><Leader>m <Plug>(easymotion-bd-n)
 nmap <Leader><Leader>/ <Plug>(easymotion-sn)
+nmap <Leader><Leader>lw <Plug>(easymotion-wl)
+nmap <Leader><Leader>lb <Plug>(easymotion-bl)
+
+" rust
+let g:rustfmt_autosave = 1
+
+" delete to void
+nnoremap <Leader>dd "_dd
+vnoremap <Leader>d "_d
+
+" diff colors
+autocmd VimEnter,Colorscheme * :hi diffAdded ctermfg=2
+autocmd VimEnter,Colorscheme * :hi diffRemoved ctermfg=1
