@@ -12,6 +12,7 @@ Plug 'benjumanji/vim-togglelist'
 Plug 'brookhong/cscope.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dbeniamine/cheat.sh-vim'
+Plug 'earthly/earthly.vim', { 'branch': 'main' }
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
