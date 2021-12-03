@@ -554,6 +554,7 @@ function! GgrepMotion(type, ...)
     let &selection = sel_save
     let @@ = reg_save
 endfunction
+nmap <Leader>gy "+y<C-G>
 
 " vim-markdown
 let g:vim_markdown_folding_disabled = 1
