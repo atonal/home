@@ -23,7 +23,7 @@
     header = white
     untracked = cyan
 [diff]
-    colorMoved = dimmed-zebra
+    colorMoved = dimmed_zebra
 [rebase]
     autoSquash = true
 
