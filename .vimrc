@@ -600,3 +600,5 @@ vnoremap <Leader>d "_d
 " diff colors
 autocmd VimEnter,Colorscheme * :hi diffAdded ctermfg=2
 autocmd VimEnter,Colorscheme * :hi diffRemoved ctermfg=1
+autocmd VimEnter,Colorscheme * :hi diffFile ctermfg=11
+autocmd VimEnter,Colorscheme * :hi diffLine ctermfg=5
