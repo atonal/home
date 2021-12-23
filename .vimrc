@@ -531,7 +531,7 @@ let g:vim_json_syntax_conceal = 0
 noremap <silent> <Leader>g <nop>
 noremap <Leader>gw :Ggrep <cword><CR>
 noremap <Leader>gf :Ggrep %:t<CR>
-noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gs :Git<CR>
 " Ggrep {motion}, e.g. ,ggiB to grep "foobar = 3" from {foobar = 3}
 " Doesn't work for multiline patterns. Also visual modes fail.
 noremap <silent> <Leader>gg :set opfunc=GgrepMotion<CR>g@
