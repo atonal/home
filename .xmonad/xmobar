@@ -1,0 +1,31 @@
+Config { font = "-misc-fixed-*-*-*-*-22-*-*-*-*-*-*-*"
+       , bgColor = "#000000"
+       , fgColor = "#506095"
+       , position = Static { xpos = 0 , ypos = 0, width = 3840, height = 24 }
+       , lowerOnStart = True
+       , commands = [ Run Weather "EFHK" [
+			"-t","<tempC> °C","-L","0","-H","25",
+			"--normal","#429942","--high","#a36666","--low","lightblue"] 36000
+                    , Run Wireless "wwan0" [
+			"-L","0","-H","1000","--normal","#429942","--high","#a36666", "-x", "wwan"] 10
+                    , Run Cpu ["-t", "<fc=#9070b0>Cpu</fc>: <total>%", "-L","3","-H","50"] 10
+                    , Run Memory ["-t","<fc=#80a0f0>Mem</fc>: <usedratio>%"] 10
+                    , Run DiskU [("/", "<fc=#d0b070>/</fc>: <used>/<size>")]
+				["-L", "20", "-H", "50", "-m", "1", "-p", "3",
+				 "--normal", "#429942", "--high", "#a0522d", "--low", "#429942"] 20
+                    , Run Volume "default" "Master" ["-t","<fc=#40e0f0>Vol</fc>: <volume>% <status>", "--", "-C","#429942","-c","#cf1414"] 1
+                    , Run Date "%_d.%_m.%Y %H:%M:%S" "date" 10
+                    , Run StdinReader
+		    , Run Battery ["-t", "<acstatus>"
+		    	, "-L", "10" , "-H", "90"
+			, "-l", "red" , "-h", "#429942"
+			, "--"
+			, "-o", "Pow: <left>% <timeleft>"
+			, "-i", "Pow: <left>% <timeleft>"
+			, "-O", "<fc=#429942>Pow</fc>: <left>% <timeleft>"
+			] 10
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %cpu% | %memory% | %disku% | %default:Master% | %wwan0wi% | %EFHK% | %battery% | <fc=#ee9a00>%date%</fc>"
+       }

@@ -72,3 +72,5 @@ XTerm*vt100.translations: #override \
   Ctrl ~Meta Shift <Key>j: string(0x1b) string("[74;5u") \n\
   Ctrl ~Meta Shift <Key>k: string(0x1b) string("[75;5u") \n\
   Ctrl ~Meta Shift <Key>l: string(0x1b) string("[76;5u")
+
+Xft.dpi: 192
