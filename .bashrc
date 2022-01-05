@@ -166,3 +166,4 @@ fi
 export GOPATH=$HOME/gocode
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.cache/rebar3/bin
