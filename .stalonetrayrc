@@ -1,6 +1,6 @@
 icon_gravity E
-geometry 10x1-0+0
-max_geometry 10x1-0+0
+geometry 10x1+3600+0
+max_geometry 10x1+3600+0
 background "#000000"
 skip_taskbar
 icon_size 24
