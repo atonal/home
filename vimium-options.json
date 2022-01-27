@@ -1,5 +1,5 @@
 {
-  "settingsVersion": "1.67",
+  "settingsVersion": "1.67.1",
   "exclusionRules": [
     {
       "pattern": "https?://mail.google.com/*",
@@ -9,7 +9,7 @@
   "filterLinkHints": true,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "unmap h\nmap h previousTab\nunmap l\nmap l nextTab\nmap <c-d> scrollPageDown\nmap <c-u> scrollPageUp\nunmap x\nunmpa X\nmap u restoreTab\nmap d removeTab\nmap <c-h> moveTabLeft\nmap <c-l> moveTabRight\nmap ' Marks.activateGotoMode\nunmap b\nmap b Vomnibar.activateTabSelection\nmap s Vomnibar.activateBookmarks\nunmap B\nmap S Vomnibar.activateBookmarksInNewTab\nunmap t\nmap t Vomnibar.activateInNewTab\nmap D dh\nmap <c-a> goNext\nmap <c-x> goPrevious\nmap <c-p> LinkHints.activateModeToOpenIncognito\nmap <c-6> visitPreviousTab",
+  "keyMappings": "unmap h\nmap h previousTab\nunmap l\nmap l nextTab\nmap <c-d> scrollPageDown\nmap <c-u> scrollPageUp\nunmap x\nunmpa X\nmap u restoreTab\nmap d removeTab\nmap <c-h> moveTabLeft\nmap <c-l> moveTabRight\nmap ' Marks.activateGotoMode\nunmap b\nmap b Vomnibar.activateTabSelection\nmap s Vomnibar.activateBookmarks\nunmap B\nmap S Vomnibar.activateBookmarksInNewTab\nunmap t\nmap t Vomnibar.activateInNewTab\nmap D dh\nmap <c-a> goNext\nmap <c-x> goPrevious\nmap <c-p> LinkHints.activateModeToOpenIncognito\nmap <c-6> visitPreviousTab\nmap O Vomnibar.activateEditUrl",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
