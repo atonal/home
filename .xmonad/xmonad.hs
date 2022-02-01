@@ -117,9 +117,9 @@ myKeys =
     , ((myModMask .|. controlMask, xK_x), runOrRaisePrompt myXPConfig)
     , ((myModMask, xK_F1), manPrompt myXPConfig)
     , ((myModMask, xK_g), goToSelected defaultGSConfig)
-    , ((0, 0x1008FF11), spawn "amixer -D pulse set Master 5%-") -- XF86XK_AudioLowerVolume
-    , ((0, 0x1008FF13), spawn "amixer -D pulse set Master 5%+") -- XF86XK_AudioRaiseVolume
-    , ((0, 0x1008FF12), spawn "amixer -D pulse set Master toggle && amixer -D pulse set PCM unmute") -- XF86XK_AudioMute
+    , ((0, 0x1008FF11), spawn "amixer set Master 5%-") -- XF86XK_AudioLowerVolume
+    , ((0, 0x1008FF13), spawn "amixer set Master 5%+") -- XF86XK_AudioRaiseVolume
+    , ((0, 0x1008FF12), spawn "amixer set Master toggle && amixer set Speaker unmute") -- XF87XK_AudioMute
     -- , ((myModMask, xK_c), kill) -- Close window
     , ((myModMask,                 xK_u), prevWS)
     , ((myModMask,                 xK_i), nextWS)
