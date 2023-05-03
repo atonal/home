@@ -19,3 +19,6 @@ alias bn='git rev-parse --abbrev-ref HEAD'
 alias watchgit='watch -c -n 0,5 git -c color.ui=always lga'
 
 alias g='git'
+
+# dive
+alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
