@@ -454,8 +454,9 @@ let g:syntastic_erlang_checkers = ['escript']
 let g:syntastic_yaml_checkers = ['jsyaml','yamlxs']
 let g:syntastic_check_on_open = 1
 let g:syntastic_c_remove_include_errors = 1
+let g:syntastic_typescript_checkers=['eslint']
 let g:syntastic_mode_map = { "mode": "passive",
-      \ "active_filetypes": ["python", "sh", "erlang"],
+      \ "active_filetypes": ["python", "sh", "erlang", "typescript"],
       \ "passive_filetypes": [] }
 
 " vim-commentary
