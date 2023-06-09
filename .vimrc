@@ -396,6 +396,11 @@ autocmd FileType bzl setl tabstop=2
 autocmd FileType bzl setl softtabstop=2
 autocmd FileType bzl setl expandtab
 
+autocmd FileType groovy setl shiftwidth=2
+autocmd FileType groovy setl tabstop=2
+autocmd FileType groovy setl softtabstop=2
+autocmd FileType groovy setl expandtab
+
 " Plugin options
 
 " Ttcn
