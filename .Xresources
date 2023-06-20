@@ -67,7 +67,7 @@ URxvt.keysym.Control-Shift-J: \033[74;5u
 URxvt.keysym.Control-Shift-K: \033[75;5u
 URxvt.keysym.Control-Shift-L: \033[76;5u
 
-urxvt*urlLauncher: firefox
+urxvt*url-launcher: firefox
 urxvt.colorUL: #86a2be
 urxvt*matcher.button: 1
 
