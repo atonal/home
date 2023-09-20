@@ -2,7 +2,7 @@
 
 if command -v xmonad ; then
     xrdb -merge .Xresources
-    xsetroot -solid black
+    xsetroot -solid darkgrey
 
     xset -b
     xset r rate 500 30
