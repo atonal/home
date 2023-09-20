@@ -20,6 +20,8 @@ if command -v xmonad ; then
 
     if [ -x /usr/bin/nm-applet ] ; then
         nm-applet --sm-disable &
+    elif [ -x /usr/bin/nm-tray ] ; then
+        XDG_CURRENT_DESKTOP=GNOME nm-tray &
     fi
 
     export SSH_ASKPASS=ssh-askpass
