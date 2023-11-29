@@ -243,10 +243,10 @@ exe "nmap <Char-246> :"
 exe "nmap <Char-214> :"
 
 " Move between windows with <C-S-*>
-map <ESC>[72;5u <C-W>h
-map <ESC>[74;5u <C-W>j
-map <ESC>[75;5u <C-W>k
-map <ESC>[76;5u <C-W>l
+map <ESC>Ptmux;<ESC><ESC>[72;5u<ESC>\ <C-W>h
+map <ESC>Ptmux;<ESC><ESC>[74;5u<ESC>\ <C-W>j
+map <ESC>Ptmux;<ESC><ESC>[75;5u<ESC>\ <C-W>k
+map <ESC>Ptmux;<ESC><ESC>[76;5u<ESC>\ <C-W>l
 
 " Resize window
 if bufwinnr(1)

@@ -61,11 +61,11 @@ URxvt.termName: rxvt-unicode-256color
 URxvt.iso14755_52: False
 URxvt.iso14755: False
 
-! Map Contro-Shift-[hjkl] to escape sequences so they can be mapped in vim
-URxvt.keysym.Control-Shift-H: \033[72;5u
-URxvt.keysym.Control-Shift-J: \033[74;5u
-URxvt.keysym.Control-Shift-K: \033[75;5u
-URxvt.keysym.Control-Shift-L: \033[76;5u
+! Map Contro-Shift-[hjkl] to escape sequences so they can be mapped in vim inside tmux
+URxvt.keysym.Control-Shift-H: \033Ptmux;\033\033[72;5u\033\134
+URxvt.keysym.Control-Shift-J: \033Ptmux;\033\033[74;5u\033\134
+URxvt.keysym.Control-Shift-K: \033Ptmux;\033\033[75;5u\033\134
+URxvt.keysym.Control-Shift-L: \033Ptmux;\033\033[76;5u\033\134
 
 urxvt*url-launcher: firefox
 urxvt.colorUL: #86a2be
