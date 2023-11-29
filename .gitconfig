@@ -63,3 +63,6 @@
 
 [includeIf "gitdir:./work/"]
     path = ./work/.gitconfig.inc
+
+[branch]
+    autoSetupMerge = false
