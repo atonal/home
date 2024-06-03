@@ -45,8 +45,8 @@ URxvt.color13: rgb:fc/54/fc
 URxvt.color14: rgb:54/fc/fc
 URxvt.color15: rgb:fc/fc/fc
 URxvt.colorBD: rgb:fc/fc/fc
-URxvt.font: xft:Inconsolata:size=10
-URxvt.italicFont: xft:Inconsolata:size=10
+URxvt.font: xft:DejaVu Sans:size=17
+URxvt.italicFont: xft:DejaVu Sans:size=17
 URxvt.perl-ext-common: font-size,default,matcher
 URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease
