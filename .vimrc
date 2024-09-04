@@ -593,6 +593,7 @@ omap ac :normal vac<CR>
 
 "vim-go
 let g:go_version_warning = 0
+let g:go_gopls_enabled = 0
 
 " ctrlp
 let g:ctrlp_cmd = 'CtrlPMRU'
