@@ -372,6 +372,11 @@ autocmd FileType typescript setl tabstop=2
 autocmd FileType typescript setl softtabstop=2
 autocmd FileType typescript setl expandtab
 
+autocmd FileType typescriptreact setl shiftwidth=2
+autocmd FileType typescriptreact setl tabstop=2
+autocmd FileType typescriptreact setl softtabstop=2
+autocmd FileType typescriptreact setl expandtab
+
 autocmd FileType javascript setl shiftwidth=2
 autocmd FileType javascript setl tabstop=2
 autocmd FileType javascript setl softtabstop=2
@@ -461,8 +466,9 @@ let g:syntastic_yaml_checkers = ['jsyaml','yamlxs']
 let g:syntastic_check_on_open = 1
 let g:syntastic_c_remove_include_errors = 1
 let g:syntastic_typescript_checkers=['eslint']
+let g:syntastic_typescriptreact_checkers=['eslint']
 let g:syntastic_mode_map = { "mode": "passive",
-      \ "active_filetypes": ["python", "sh", "erlang", "typescript"],
+      \ "active_filetypes": ["python", "sh", "erlang", "typescript",  "typescriptreact"],
       \ "passive_filetypes": [] }
 
 " vim-commentary
