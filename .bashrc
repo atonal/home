@@ -168,3 +168,5 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.cache/rebar3/bin
 complete -C /usr/bin/terraform terraform
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
