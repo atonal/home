@@ -43,7 +43,7 @@ Plug 'raimondi/delimitmate'
 Plug 'rust-lang/rust.vim'
 Plug 'Rykka/colorv.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -87,6 +87,7 @@ if has('mouse')
 endif
 
 filetype plugin indent on
+set omnifunc=ale#completion#OmniFunc
 
 set nocompatible
 set autoindent
@@ -456,21 +457,23 @@ let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 let g:tagbar_compact = 1
 
-" Syntastic
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501 --max-complexity=10'
-let g:syntastic_c_checkers = ['cppcheck', 'splint', 'gcc']
-let g:syntastic_cpp_checkers = ['cppcheck']
-let g:syntastic_sh_checkers = ['shellcheck']
-let g:syntastic_erlang_checkers = ['escript']
-let g:syntastic_yaml_checkers = ['jsyaml','yamlxs']
-let g:syntastic_check_on_open = 1
-let g:syntastic_c_remove_include_errors = 1
-let g:syntastic_typescript_checkers=['eslint']
-let g:syntastic_typescriptreact_checkers=['eslint']
-let g:syntastic_mode_map = { "mode": "passive",
-      \ "active_filetypes": ["python", "sh", "erlang", "typescript",  "typescriptreact"],
-      \ "passive_filetypes": [] }
+" ALE
+let g:ale_completion_enabled = 1
+let g:ale_linters = {
+\   'python': ['pylsp'],
+\}
+let g:ale_python_pylsp_config = {
+\   'pylsp': {
+\     'plugins': {
+\       'ruff': {
+\         'enabled': v:true,
+\         'formatEnabled': v:true,
+\       },
+\     },
+\   },
+\}
+let g:ale_fixers = { "python": ["ruff_format"] }
+
 
 " vim-commentary
 " Use // instead of /* */ commenting in C and C++ files
@@ -593,7 +596,7 @@ omap ac :normal vac<CR>
 
 "vim-go
 let g:go_version_warning = 0
-let g:go_gopls_enabled = 0
+let g:go_gopls_enabled = 1
 
 " ctrlp
 let g:ctrlp_cmd = 'CtrlPMRU'
