@@ -621,3 +621,6 @@ autocmd VimEnter,Colorscheme * :hi diffAdded ctermfg=2
 autocmd VimEnter,Colorscheme * :hi diffRemoved ctermfg=1
 autocmd VimEnter,Colorscheme * :hi diffFile ctermfg=11
 autocmd VimEnter,Colorscheme * :hi diffLine ctermfg=5
+
+" omnicomplete colors
+autocmd VimEnter,Colorscheme * :hi Pmenu ctermfg=14 ctermbg=242 guibg=Magenta
