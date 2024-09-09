@@ -44,6 +44,10 @@ Plug 'rust-lang/rust.vim'
 Plug 'Rykka/colorv.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'rhysd/vim-lsp-ale'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -68,6 +72,7 @@ Plug 'vim-scripts/cmake'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'vim-scripts/ScrollColors'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'towolf/vim-helm'
 
 "Colorschemes
 Plug 'ciaranm/inkpot'
@@ -457,10 +462,22 @@ let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 let g:tagbar_compact = 1
 
+" vim-lsp
+let g:lsp_ale_auto_config_ale = v:false
+let g:lsp_ale_auto_enable_linter = v:false
+if executable('helm_ls')
+    autocmd User lsp_setup call lsp#register_server({
+        \   'name': 'helm_ls',
+		\   'cmd': {server_info->['helm_ls', 'serve']},
+        \   'allowlist': ['helm'],
+        \ })
+endif
+
 " ALE
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \   'python': ['pylsp'],
+\   'helm': ['vim-lsp'],
 \}
 let g:ale_python_pylsp_config = {
 \   'pylsp': {
@@ -473,7 +490,6 @@ let g:ale_python_pylsp_config = {
 \   },
 \}
 let g:ale_fixers = { "python": ["ruff_format"] }
-
 
 " vim-commentary
 " Use // instead of /* */ commenting in C and C++ files
