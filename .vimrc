@@ -73,6 +73,7 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'vim-scripts/ScrollColors'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'towolf/vim-helm'
+Plug 'pearofducks/ansible-vim'
 
 "Colorschemes
 Plug 'ciaranm/inkpot'
