@@ -480,6 +480,11 @@ let g:ale_linters = {
 \   'python': ['pylsp'],
 \   'helm': ['vim-lsp'],
 \}
+" let g:ale_linters_ignore = {
+" \   'yaml': ['yaml-language-server', 'yamllint', 'ansible-lint'],
+" \   'yaml.ansible': ['yaml-language-server', 'yamllint', 'ansible-lint'],
+" \}
+" let g:ale_linters_explicit = 1
 let g:ale_python_pylsp_config = {
 \   'pylsp': {
 \     'plugins': {
@@ -491,6 +496,11 @@ let g:ale_python_pylsp_config = {
 \   },
 \}
 let g:ale_fixers = { "python": ["ruff_format"] }
+
+nmap <leader>af <Plug>(ale_find_references)
+" nnoremap <silent> <leader>af :ALEFindReferences -quickfix<CR>:copen<CR>
+nmap <leader>ad <Plug>(ale_go_to_definition)
+nmap <leader>at <Plug>(ale_go_to_type_definition)
 
 " vim-commentary
 " Use // instead of /* */ commenting in C and C++ files
