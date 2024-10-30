@@ -501,6 +501,7 @@ nmap <leader>af <Plug>(ale_find_references)
 " nnoremap <silent> <leader>af :ALEFindReferences -quickfix<CR>:copen<CR>
 nmap <leader>ad <Plug>(ale_go_to_definition)
 nmap <leader>at <Plug>(ale_go_to_type_definition)
+nmap <leader>aa <Plug>(ale_toggle_buffer)
 
 " vim-commentary
 " Use // instead of /* */ commenting in C and C++ files
