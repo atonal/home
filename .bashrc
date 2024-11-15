@@ -170,3 +170,6 @@ export PATH=$PATH:$HOME/.cache/rebar3/bin
 complete -C /usr/bin/terraform terraform
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
