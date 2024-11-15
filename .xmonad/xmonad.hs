@@ -121,6 +121,8 @@ myKeys =
     , ((0, 0x1008FF13), spawn "amixer set Master 5%+") -- XF86XK_AudioRaiseVolume
     , ((0, 0x1008FF12), spawn "amixer set Master toggle && amixer set Speaker unmute") -- XF87XK_AudioMute
     -- , ((myModMask, xK_c), kill) -- Close window
+    , ((0, 0x1008FF02), spawn "brightnessctl -d intel_backlight set +10%") -- xF86XK_MonBrightnessUp
+    , ((0, 0x1008FF03), spawn "brightnessctl -d intel_backlight set 10%-") -- xF86XK_MonBrightnessDown
     , ((myModMask,                 xK_u), prevWS)
     , ((myModMask,                 xK_i), nextWS)
     , ((myModMask .|. controlMask, xK_u), shiftToPrev)
