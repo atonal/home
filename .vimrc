@@ -210,7 +210,7 @@ endfunction
 nnoremap <silent> <Leader>m :nohlsearch<CR>
 
 " Search vim help for the word under cursor
-nnoremap <silent> <Leader>vh yiw:h <C-r>"<CR>
+nnoremap <silent> <Leader>hh yiw:h <C-r>"<CR>
 
 nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 
@@ -643,6 +643,7 @@ let g:rustfmt_autosave = 1
 " delete to void
 nnoremap <Leader>dd "_dd
 vnoremap <Leader>d "_d
+nnoremap <Leader>v "_
 
 " diff colors
 autocmd VimEnter,Colorscheme * :hi diffAdded ctermfg=2
