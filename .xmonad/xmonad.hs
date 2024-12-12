@@ -12,7 +12,6 @@ import XMonad.Layout.PerWorkspace (onWorkspace)
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.ManageHelpers
-import XMonad.Hooks.ICCCMFocus
 import XMonad.StackSet hiding (workspaces)
 import XMonad.Actions.SpawnOn
 import XMonad.Actions.GridSelect
@@ -50,7 +49,7 @@ myLayoutHook = onWorkspace "1" tallLayout
              $ onWorkspace "0" gridLayout
              $ onWorkspace "+" tallLayout
              $ layouts
-        where layouts = smartBorders $ avoidStruts $ (layoutHook defaultConfig)
+        where layouts = smartBorders $ avoidStruts $ (layoutHook def)
               tallLayout = smartBorders $ avoidStruts (Tall 1 (3/100) (1/2) ||| Full)
               gridLayout = smartBorders $ avoidStruts (Grid ||| Full)
               threeColLayout = smartBorders $ avoidStruts (ThreeCol 1 (3/100) (1/2) ||| Full)
@@ -66,7 +65,7 @@ myManageHook = myFloats <+> (composeAll
     , title     =? "xterm_3"        --> doShift "3"
     , title     =? "xterm_4"        --> doShift "4"
     , title     =? "xterm_5"        --> doShift "5"
-    ]) <+> manageHook defaultConfig
+    ]) <+> manageHook def
 
 myFloats = composeOne
     [className  =? "XCalc"      -?> doCenterFloat
@@ -116,7 +115,7 @@ myKeys =
     , ((myModMask .|. shiftMask, xK_period), spawn "ncmpcpp next")
     , ((myModMask .|. controlMask, xK_x), runOrRaisePrompt myXPConfig)
     , ((myModMask, xK_F1), manPrompt myXPConfig)
-    , ((myModMask, xK_g), goToSelected defaultGSConfig)
+    , ((myModMask, xK_g), goToSelected def)
     , ((0, 0x1008FF11), spawn "amixer set Master 5%-") -- XF86XK_AudioLowerVolume
     , ((0, 0x1008FF13), spawn "amixer set Master 5%+") -- XF86XK_AudioRaiseVolume
     , ((0, 0x1008FF12), spawn "amixer set Master toggle && amixer set Speaker unmute") -- XF87XK_AudioMute
@@ -144,7 +143,7 @@ myKeys =
     | (i, k) <- zip myWorkspaces [xK_1, xK_2, xK_3, xK_4, xK_5, xK_6, xK_7, xK_8, xK_9, xK_0, xK_plus]
     , (f, m) <- [(greedyView, 0), (shift, shiftMask)]]
 
-myXPConfig = defaultXPConfig {
+myXPConfig = def {
       font = "xft: inconsolata-14"
     , position = Top
     , promptBorderWidth = 0
@@ -152,14 +151,14 @@ myXPConfig = defaultXPConfig {
 
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar"
-  xmonad $ docks $ defaultConfig {
+  xmonad $ docks $ ewmh $ def {
                terminal = myTerminal
              , manageHook = myManageHook
              , layoutHook = myLayoutHook
              , borderWidth = myBorderWidth
              , focusedBorderColor = myFocusedBorderColor
              , modMask = myModMask
-             , logHook = myLogHook xmproc >> ewmhDesktopsLogHook >> setWMName "LG3D" >> takeTopFocus
+             , logHook = myLogHook xmproc >> setWMName "LG3D"
              --, startupHook = setWMName "LG3D" -- Fix Java programs
              , workspaces = myWorkspaces
              } `additionalKeys` myKeys
