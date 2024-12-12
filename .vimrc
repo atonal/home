@@ -375,6 +375,11 @@ autocmd FileType yaml setl tabstop=2
 autocmd FileType yaml setl softtabstop=2
 autocmd FileType yaml setl expandtab
 
+autocmd FileType helm setl shiftwidth=2
+autocmd FileType helm setl tabstop=2
+autocmd FileType helm setl softtabstop=2
+autocmd FileType helm setl expandtab
+
 autocmd FileType typescript setl shiftwidth=2
 autocmd FileType typescript setl tabstop=2
 autocmd FileType typescript setl softtabstop=2
