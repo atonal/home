@@ -485,7 +485,6 @@ let g:ale_linters = {
 \   'python': ['pylsp'],
 \   'helm': ['vim-lsp'],
 \}
-let g:ale_yaml_yamllint_options = '-d "{extends: relaxed, rules: {line-length: {max: 120}}}"'
 " let g:ale_linters_ignore = {
 " \   'yaml': ['yaml-language-server', 'yamllint', 'ansible-lint'],
 " \   'yaml.ansible': ['yaml-language-server', 'yamllint', 'ansible-lint'],
