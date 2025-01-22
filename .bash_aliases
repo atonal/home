@@ -24,6 +24,10 @@ alias g='git'
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
 
 alias k='kubectl'
+alias kns='kubens'
+alias kctx='kubectx'
+alias kcx='kubectx'
+alias kx='kubectx'
 
 # Autocomplete for aliases - MUST be the last line
 complete -F _complete_alias "${!BASH_ALIASES[@]}"
