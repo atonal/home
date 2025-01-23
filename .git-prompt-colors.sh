@@ -16,9 +16,8 @@ override_git_prompt_colors() {
   GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${BoldGreen}\u@\h:${BoldBlue}\w${ResetColor}"
   GIT_PROMPT_START_ROOT="_LAST_COMMAND_INDICATOR_ ${BoldRed}\u@\h:${BoldBlue}\w${ResetColor}"
 
-  GIT_PROMPT_END_USER=" \n${BoldBlue}${Time12a}${ResetColor} $ "
+  GIT_PROMPT_END_USER=' $(kube_ps1)'"\n${BoldBlue}${Time12a}${ResetColor} $ "
   GIT_PROMPT_END_ROOT=" \n${BoldBlue}${Time12a}${ResetColor} # "
 }
 
 reload_git_prompt_colors "Single_line_nono031"
-

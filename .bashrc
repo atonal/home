@@ -144,6 +144,14 @@ list_dependencies() {
         "${pkg}" | grep "^\w" | sort -u
 }
 
+if [ -f "$HOME"/.bash/kube-ps1/kube-ps1.sh ]; then
+    source "$HOME"/.bash/kube-ps1/kube-ps1.sh
+    export KUBE_PS1_PREFIX='['
+    export KUBE_PS1_SUFFIX'=]'
+    export KUBE_PS1_SYMBOL_ENABLE=false
+    # Used in ~/.git-prompt-colors.sh
+fi
+
 if [ -f "$HOME/.bash/bash-git-prompt/gitprompt.sh" ]; then
     export GIT_PROMPT_THEME=Custom
     export GIT_PROMPT_FETCH_REMOTE_STATUS=0
