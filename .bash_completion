@@ -1,1 +1,4 @@
 source "$HOME"/.complete_alias
+if [ -f /usr/share/bash-completion/completions/fzf ]; then
+    source /usr/share/bash-completion/completions/fzf
+fi
