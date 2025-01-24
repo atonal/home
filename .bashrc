@@ -149,7 +149,9 @@ if [ -f "$HOME"/.bash/kube-ps1/kube-ps1.sh ]; then
     export KUBE_PS1_PREFIX='['
     export KUBE_PS1_SUFFIX'=]'
     export KUBE_PS1_SYMBOL_ENABLE=false
-    # Used in ~/.git-prompt-colors.sh
+    # Disable as default, turn on with `kubeon` when needed
+    export KUBE_PS1_ENABLED=off
+    # kube-ps1 activated in: ~/.git-prompt-colors.sh
 fi
 
 if [ -f "$HOME/.bash/bash-git-prompt/gitprompt.sh" ]; then
