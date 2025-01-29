@@ -23,6 +23,9 @@ alias g='git'
 # dive
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
 
+# systemctl
+alias sc='systemctl'
+
 alias k='kubectl'
 alias kns='kubens'
 alias kctx='kubectx'
