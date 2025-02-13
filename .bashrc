@@ -183,3 +183,6 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
+export EDITOR=vim
+export DELVE_EDITOR=view
