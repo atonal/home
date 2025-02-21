@@ -74,6 +74,7 @@ Plug 'vim-scripts/ScrollColors'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'towolf/vim-helm'
 Plug 'pearofducks/ansible-vim'
+Plug 'github/copilot.vim'
 
 "Colorschemes
 Plug 'ciaranm/inkpot'
@@ -615,8 +616,8 @@ let g:vim_markdown_folding_disabled = 1
 let g:tex_flavor = 'latex'
 
 " print line(s) to terminal (for copy-pasting)
-nnoremap <Leader>c :execute ":!sed -n " . line('.') . "," . line('.') . "p %"<CR>
-vnoremap <Leader>c :<C-W>execute ":!sed -n " . line("'<") . "," . line("'>") . "p %"<CR>
+nnoremap <Leader>t :execute ":!sed -n " . line('.') . "," . line('.') . "p %"<CR>
+vnoremap <Leader>t :<C-W>execute ":!sed -n " . line("'<") . "," . line("'>") . "p %"<CR>
 
 " bash variable text object, use e.g. dav to delete ${}
 vnoremap av :<C-U>silent! normal! F{F$vf}<CR>
@@ -659,3 +660,10 @@ autocmd VimEnter,Colorscheme * :hi diffLine ctermfg=5
 
 " omnicomplete colors
 autocmd VimEnter,Colorscheme * :hi Pmenu ctermfg=14 ctermbg=242 guibg=Magenta
+
+" copilot
+" Disabled for a buffer by default
+autocmd BufReadPre,BufNewFile * :let b:copilot_enabled=v:false
+nnoremap <silent> <Leader>c <nop>
+nnoremap <silent> <Leader>ce :let b:copilot_enabled=v:true<CR>
+nnoremap <silent> <Leader>cd :let b:copilot_enabled=v:false<CR>
