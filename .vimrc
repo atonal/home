@@ -230,8 +230,8 @@ noremap <Leader>G ggVG
 " Move lines
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
+" inoremap <C-j> <Esc>:m .+1<CR>==gi
+" inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
@@ -667,3 +667,7 @@ autocmd BufReadPre,BufNewFile * :let b:copilot_enabled=v:false
 nnoremap <silent> <Leader>c <nop>
 nnoremap <silent> <Leader>ce :let b:copilot_enabled=v:true<CR>
 nnoremap <silent> <Leader>cd :let b:copilot_enabled=v:false<CR>
+inoremap <C-l> <Plug>(copilot-next)
+inoremap <C-h> <Plug>(copilot-previous)
+inoremap <C-k> <Plug>(copilot-accept-word)
+inoremap <C-j> <Plug>(copilot-accept-line)
