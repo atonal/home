@@ -662,6 +662,7 @@ autocmd VimEnter,Colorscheme * :hi diffLine ctermfg=5
 autocmd VimEnter,Colorscheme * :hi Pmenu ctermfg=14 ctermbg=242 guibg=Magenta
 
 " copilot
+let g:copilot_settings = #{selectedCompletionModel: 'gpt-4o-copilot'}
 " Disabled for a buffer by default
 autocmd BufReadPre,BufNewFile * :let b:copilot_enabled=v:false
 nnoremap <silent> <Leader>c <nop>
