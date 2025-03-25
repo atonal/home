@@ -23,6 +23,10 @@ alias g='git'
 # dive
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
 
+# git
+alias gtop='cd $(git rev-parse --show-toplevel)'
+alias xb='git branch --show-current | xclip -r -i'
+
 # systemctl
 alias sc='systemctl'
 
