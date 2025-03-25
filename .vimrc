@@ -671,3 +671,4 @@ inoremap <C-l> <Plug>(copilot-next)
 inoremap <C-h> <Plug>(copilot-previous)
 inoremap <C-k> <Plug>(copilot-accept-word)
 inoremap <C-j> <Plug>(copilot-accept-line)
+nnoremap <Leader>cs :Copilot status<CR>
