@@ -27,6 +27,9 @@ alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wag
 alias gtop='cd $(git rev-parse --show-toplevel)'
 alias xb='git branch --show-current | xclip -r -i'
 
+# vimbash
+alias öq='exit'
+
 # systemctl
 alias sc='systemctl'
 
