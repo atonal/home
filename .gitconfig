@@ -62,6 +62,8 @@
     cod3 = checkout --conflict=diff3
     rom = rebase origin/main
     ri = rebase -i
+    body = show --format=format:"%b" --no-patch
+    title = show --format=format:"%s" --no-patch
 [push]
     default = simple
 [user]
