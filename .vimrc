@@ -509,6 +509,7 @@ nmap <leader>ad <Plug>(ale_go_to_definition)
 nmap <leader>at <Plug>(ale_go_to_type_definition)
 nmap <leader>ai <Plug>(ale_go_to_implementation)
 nmap <leader>aa <Plug>(ale_toggle_buffer)
+nmap <leader>ar <Plug>(ale_reset_buffer)
 
 " vim-commentary
 " Use // instead of /* */ commenting in C and C++ files
